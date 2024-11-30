@@ -16,7 +16,6 @@ const pool = mysql.createPool({
     queueLimit: 0
 })
 
-
 app.get('/medicos', (req, res) => {
     pool.query("select * from tb_medico", (err, results, fields) => {
         res.json(results)
